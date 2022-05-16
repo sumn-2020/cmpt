@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <header id="header">
   <b-navbar toggleable="lg" type="dark" variant="info">
     <b-navbar-brand href="#">NavBar</b-navbar-brand>
 
@@ -37,7 +37,7 @@
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
-</div>
+</header>
 
 </template>
 

@@ -5,17 +5,21 @@
       <router-view></router-view>
     </div>
     <FooterPage />
+    <TopBtn />
   </div>
 </template>
 
 <script>
 import HeaderPage from './components/layout/Header.vue';
 import FooterPage from './components/layout/FooterPage.vue';
+import TopBtn from './components/TopButton.vue';
 
 export default {
   name: 'App',
   components: {
-    HeaderPage,FooterPage
+    HeaderPage,
+    FooterPage,
+    TopBtn
   }
 }
 </script>

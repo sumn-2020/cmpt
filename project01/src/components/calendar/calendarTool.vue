@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="grab">
         <v-app id="inspire">
           <v-flex xs24>
             <v-row justify="center">
@@ -17,7 +17,6 @@
         picker: (new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10),
       }
     },
-   
     methods: {
       getDay(date) {
                         const daysOfWeek = ['일', '월', '화', '수', '목', '금', '토'];
@@ -46,8 +45,8 @@
       },
       getHeaderTitleMonth(date){ 
          const now  = new Date();
-         return now.getFullYear(date)  ; 
+         return now.getFullYear(date); 
       }
     },
   }
-</script>
+</script> 
