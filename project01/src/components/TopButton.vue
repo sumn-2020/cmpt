@@ -1,22 +1,37 @@
 <template>
-    <f-fab-transition>
-        <v-btn bottom right fixed fab dark small @click="$vuetify.goTo('#header')">버튼</v-btn>
-    </f-fab-transition>
+     <transition name="fade">
+        <v-btn bottom right fixed fab dark small id="pagetop" v-show="scY > 300" @click="toTop">
+        탑버튼
+        </v-btn>
+    </transition>
 </template>
 <script>
 export default {
     name: 'TopBtn',
+     data() {
+      return {
+        scTimer: 0,
+        scY: 0,
+      }
+    },
+    mounted() {
+      window.addEventListener('scroll', this.handleScroll);
+    },
     methods: {
-        handleScroll(){
-            this.btnShow = window.scrollY > 400;
-        }
+      handleScroll: function () {
+        if (this.scTimer) return;
+        this.scTimer = setTimeout(() => {
+          this.scY = window.scrollY;
+          clearTimeout(this.scTimer);
+          this.scTimer = 0;
+        }, 100);
+      },
+      toTop: function () {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      },
     },
-    beforeMount() {
-        window.addEventListener("scroll", this.handleScroll);
-    },
-    beforeDestroy() {
-        window.removeEventListener("scroll", this.handleScroll);
-    },
-    
 }
 </script>
