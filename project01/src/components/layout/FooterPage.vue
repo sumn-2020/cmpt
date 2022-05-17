@@ -1,7 +1,7 @@
 <template>
     <div>
         <footer>
-          sdf
+          푸터
           </footer>
     </div>
 </template>

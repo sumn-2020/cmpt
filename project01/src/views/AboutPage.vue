@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import calendarTool from "../components/vutify/calendar/calendarTool.vue";
-import calendarKorean from "../components/vutify/calendar/calendarKorean.vue";
+import calendarTool from "../components/calendar/calendarTool.vue";
+import calendarKorean from "../components/calendar/calendarKorean.vue";
 
 export default {
   name: "AboutPage",

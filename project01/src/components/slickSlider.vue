@@ -29,7 +29,7 @@ export default {
             slickOptions: {
                 dots: true,
                 infinite: true,
-                autoplay: true,
+                autoplay: false,
                 arrows : false,                    
                 draggable:true,
                 speed: 1000,

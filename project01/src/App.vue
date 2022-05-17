@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <HeaderPage />
+    <Header />
     <div id="content" class="content">
       <router-view></router-view>
     </div>
@@ -10,14 +10,14 @@
 </template>
 
 <script>
-import HeaderPage from './components/layout/Header.vue';
+import Header from './components/layout/Header.vue';
 import FooterPage from './components/layout/FooterPage.vue';
 import TopBtn from './components/TopButton.vue';
 
 export default {
   name: 'App',
   components: {
-    HeaderPage,
+    Header,
     FooterPage,
     TopBtn
   }
