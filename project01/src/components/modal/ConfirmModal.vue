@@ -7,11 +7,18 @@
         </p>
       </header>
       <div class="modalBody alignL">
-        <p v-html="contents"></p>
+        <p v-html="contents" />
       </div>
       <div class="modalFooter">
-          <button @click="onClickClose(false)" class="cancleBtn">{{cancelText}}</button>
-          <button @click="onClickClose(true)">{{confirmText}}</button>
+        <button
+          class="cancleBtn"
+          @click="onClickClose(false)"
+        >
+          {{ cancelText }}
+        </button>
+        <button @click="onClickClose(true)">
+          {{ confirmText }}
+        </button>
       </div>
     </div> 
   </div>

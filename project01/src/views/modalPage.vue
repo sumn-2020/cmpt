@@ -1,16 +1,43 @@
 <template>
-    <div>
-        <!-- <button type="button" @click="onClickSignin()">alert</button> -->
-        <button class="btn" @click="smsVerify()"> 모달type02 </button>
-        <sms-verify-modal v-if="isShowSmsVerifyModal" @modal-closed='handleModalClosed'/>
-    </div>
+  <div>
+    <!-- alertBtn -->
+    <button
+      type="button"
+      @click="alertShow()"
+    >
+      alertBtn
+    </button> 
+    <!--  //alertBtn -->
+
+    <!-- confirmBtn -->
+    <button
+      type="button"
+      @click="confirmShow()"
+    >
+      confirmBtn
+    </button> 
+    <!--  //confirmBtn -->
+
+    <!--  모달type02 -->
+    <button
+      class="btn"
+      @click="smsVerify()"
+    >
+      모달type02
+    </button>
+    <sms-verify-modal
+      v-if="isShowSmsVerifyModal"
+      @modal-closed="handleModalClosed"
+    />
+    <!--  // 모달type02 -->
+  </div>
 </template>
 
 <script>
 import SmsVerifyModal from '@/components/modal/SmsVerifyModal.vue'
 
 export default {
-    name: 'modalPage',
+    name: 'ModalPage',
     components: {
       SmsVerifyModal
     },
@@ -21,6 +48,7 @@ export default {
       }
     },
     methods: {
+        //일반modal 
         smsVerify() {
             this.isShowSmsVerifyModal = true
         },
@@ -28,13 +56,17 @@ export default {
             if(value === SmsVerifyModal.name){
                 this.isShowSmsVerifyModal = false
             }
-        }
-      // onClickSignin() {
-      //           this.$alert("알림", "가입하지 않은 아이디이거나, 잘못된 비밀번호입니다.");
-      //       }
-      //   },
-
-
+        },
+        //alert창
+        alertShow(){
+                this.$alert('알림창', '알림창입니다.')
+                return
+        },
+        // confirm창
+        confirmShow(){
+              this.$confirm('컨펀창', '컨펌알림창입니다.')
+                return
+        },
     }
 }
 
