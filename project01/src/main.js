@@ -3,9 +3,12 @@ import App from "./App.vue";
 import router from "./router";
 import style from "./assets/css/common.css";
 
+
 //vue-js-modal
 import VModal from 'vue-js-modal';
 Vue.use(VModal, { dynamic: true });
+import commonModal from '@/plugins/commonModal'
+Vue.use(commonModal);
 
 //bootstrap
 import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
