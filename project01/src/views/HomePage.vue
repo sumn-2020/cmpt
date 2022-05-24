@@ -3,7 +3,6 @@
     <ListPage /> <br>
     <slickSlider /> <br>
     <TabTool /> <br>
-    <modalPage />
   </div>
 </template>
 
@@ -12,7 +11,6 @@
 import ListPage from '../components/ListPage.vue';
 import slickSlider from '../components/slickSlider.vue';
 import TabTool from '../components/TabTool.vue';
-import modalPage from '../components/modalPage.vue';
 
 export default {
     name: 'HomePage',
@@ -20,7 +18,6 @@ export default {
         ListPage,
         slickSlider,
         TabTool,
-        modalPage
     },
     data: function() {
         return {

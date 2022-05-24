@@ -1,24 +1,35 @@
 <template>
-    <div>
-        <ul class="tab_menu">
-            <li v-for="(tab, index) in tabs" :key="tab" :class="{active: currentTab === index}" @click="currentTab = index"> <!-- -->
-                {{ tab }}
-            </li>
-        </ul>
+  <div>
+    <ul class="tab_menu">
+      <li
+        v-for="(tab, index) in tabs"
+        :key="index"
+        :class="{active: currentTab === index}"
+        @click="currentTab = index"
+      >
+        <!-- -->
+        {{ tab }}
+      </li>
+    </ul>
 
-        <div class="tab_body">
-            <div v-show="currentTab==0">tabbody1</div> <!-- currentTab 이 0일때만 보여라-->
-            <div v-show="currentTab==1">
-                <ul>
-                    <li v-for="tabItem in tabItems" :key="tabItem">
-                        {{tabItem.title}}
-                        <p v-html="tabItem.infoTxt.replace(/(?:\r\n|\r|\n)/g, '<br />')"></p> <!-- /(?:\r\n|\r|\n)/g를 br태그로 대체-->
-                        <!-- {{tabItem.infoTxt}} -->
-                    </li>
-                </ul>
-            </div>
-        </div>
+    <div class="tab_body">
+      <div v-show="currentTab==0">
+        tabbody1
+      </div> <!-- currentTab 이 0일때만 보여라-->
+      <div v-show="currentTab==1">
+        <ul>
+          <li
+            v-for="(tabItem,index) in tabItems"
+            :key="index"
+          >
+            {{ tabItem.title }}
+            <p v-html="tabItem.infoTxt.replace(/(?:\r\n|\r|\n)/g, '<br />')" /> <!-- /(?:\r\n|\r|\n)/g를 br태그로 대체-->
+            <!-- {{tabItem.infoTxt}} -->
+          </li>
+        </ul>
+      </div>
     </div>
+  </div>
 </template>
 <script>
 export default {
