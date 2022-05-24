@@ -1,13 +1,19 @@
 <template>
-    <div>
-        <vueSlickCarousel v-bind="slickOptions">
-            <div v-for="d in data1" :key="d">
-                <a :href="d.image">
-                    <img :src="d.image" alt="">{{ d.text }}
-                </a>
-            </div>
-        </vueSlickCarousel>
-    </div>
+  <div>
+    <vueSlickCarousel v-bind="slickOptions">
+      <div
+        v-for="(d,index) in data1"
+        :key="index"
+      >
+        <a :href="d.image">
+          <img
+            :src="d.image"
+            alt=""
+          >{{ d.text }}
+        </a>
+      </div>
+    </vueSlickCarousel>
+  </div>
 </template>
 
 <script>
@@ -16,7 +22,7 @@ import 'vue-slick-carousel/dist/vue-slick-carousel.css'
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 
 export default {
-    name: 'slickSlider',
+    name: 'SlickSlider',
     components: { vueSlickCarousel },
     data: function() {
         return {

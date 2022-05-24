@@ -10,7 +10,6 @@ import calendarTool from "../components/calendar/calendarTool.vue";
 import calendarKorean from "../components/calendar/calendarKorean.vue";
 
 export default {
-  name: "AboutPage",
   components: {
     calendarTool,
     calendarKorean

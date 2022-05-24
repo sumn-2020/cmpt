@@ -20,17 +20,6 @@
     </button> 
     <!--  //confirmBtn -->
 
-
-    <!-- calendar Modal Btn -->
-    <!-- <button
-      type="button"
-      class="btn"
-      @click="calendarShow()"
-    >
-      달력모달
-    </button>  -->
-    <!--  //calendar Modal Btn  -->
-
     <!--  이중모달 -->
     <button
       class="btn"
@@ -44,6 +33,16 @@
       @modal-closed="handleModalClosed"
     /> 
     <!--  // 이중모달 -->
+
+    <!-- calendar Modal Btn -->
+    <button
+      type="button"
+      class="btn"
+      @click="calendarShow()"
+    >
+      달력모달
+    </button>  
+    <!--  //calendar Modal Btn  -->
   </div>
 </template>
 
@@ -78,6 +77,10 @@ export default {
               this.$confirm('컨펀창', '컨펌알림창입니다.')
                 return
         },
+        //달력모달
+        calendarShow(){
+          
+        }
     }
 }
 

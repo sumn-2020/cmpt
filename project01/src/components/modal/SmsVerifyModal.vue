@@ -5,7 +5,7 @@
     width="600px"
     :scrollable="true"
     :adaptive="true"
-    @before-open="beforeOpen"
+   
     @closed="closed"
   >
     <div class="modal_head">
@@ -15,36 +15,28 @@
     </div>
     <div class="modal_body">
       <div class="varDataAddBox">
-        <ValidationObserver
-          tag="form"
-          class="loginFormBox"
-        >
-          <div class="modal_footer nomargin">
-            <button
-              type="button"
-              class="cancleBtn"
-              @click="cancel"
-            >
-              취 소
-            </button>
-            <button
-              v-if="!isVerified"
-              type="button"
-              class="saveBtn"
-              @click="onClickSendVerifyNum(mobile, errors)"
-            >
-              인증번호<br>전송
-            </button>
-            <button
-              v-if="isVerified"
-              type="button"
-              class="saveBtn"
-              @click="onClickVerifyJoin()"
-            >
-              인 증
-            </button>
-          </div>
-        </validationobserver>
+        <div class="modal_footer nomargin">
+          <button
+            type="button"
+            class="cancleBtn"
+            @click="cancel"
+          >
+            취 소
+          </button>
+          <button
+            type="button"
+            class="saveBtn"
+            @click="onClickSendVerifyNum()"
+          >
+            인증번호<br>전송
+          </button>
+          <button
+            type="button"
+            class="saveBtn"
+          >
+            인 증
+          </button>
+        </div>
       </div>
     </div>
   </modal>
@@ -52,9 +44,7 @@
 
 <script>
 export default {
-    name: 'SmsVerifyModal',
-  
-
+    name: 'SmsVerifyModal',  
     mounted(){
         this.show()
     },
@@ -73,13 +63,8 @@ export default {
             this.hide()
         },
         onClickSendVerifyNum(){
-  
                 this.$alert('알림', '휴대폰 번호를 입력해주세요.')
                 return
-          
-   
-  
-    
         },
 
 
@@ -92,3 +77,4 @@ export default {
     display: none;
 }
 </style>
+

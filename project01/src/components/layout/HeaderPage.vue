@@ -25,9 +25,15 @@
           </router-link>
           <router-link
             class=""
-            to="/about"
+            to="/calendar"
           >
             달력
+          </router-link>
+          <router-link
+            class=""
+            to="/calendarFull"
+          >
+            달력2
           </router-link>
           <router-link
             class=""
@@ -95,3 +101,10 @@ export default {
     name: 'HeaderPage'
 }
 </script>
+
+<style scoped lang="scss">
+    #header ::v-deep {
+        @import "~bootstrap/dist/css/bootstrap.min";
+        @import "~bootstrap-vue/dist/bootstrap-vue.min";
+    }
+</style>

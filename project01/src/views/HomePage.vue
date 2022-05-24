@@ -1,12 +1,10 @@
 <template>
-    <div>
-
-        <ListPage /> <br>
-        <slickSlider /> <br>
-        <TabTool /> <br>
-        <modalPage />
-        
-    </div>
+  <div>
+    <ListPage /> <br>
+    <slickSlider /> <br>
+    <TabTool /> <br>
+    <modalPage />
+  </div>
 </template>
 
 
@@ -31,7 +29,5 @@ export default {
 }
 </script>
 
-<style>
-@import '../assets/scss/common.scss';
-</style>
+
 
