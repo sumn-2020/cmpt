@@ -1,13 +1,19 @@
 <template>
-    <div class="grab">
-        <v-app id="inspire">
-          <v-flex xs24>
-            <v-row justify="center">
-              <v-date-picker v-model="picker" :weekday-format="getDay" :month-format="getMonth" :title-date-format="getMonth" :header-date-format="getHeaderTitleMonth"></v-date-picker>
-            </v-row>
-          </v-flex>
-        </v-app>
-    </div>
+  <div class="grab">
+    <v-app id="inspire">
+      <v-flex xs24>
+        <v-row justify="center">
+          <v-date-picker
+            v-model="picker"
+            :weekday-format="getDay"
+            :month-format="getMonth"
+            :title-date-format="getMonth"
+            :header-date-format="getHeaderTitleMonth"
+          />
+        </v-row>
+      </v-flex>
+    </v-app>
+  </div>
 </template>
 
 <script>
@@ -43,9 +49,9 @@
                         let i = new Date(date).getMonth(date);
                         return monthName[i];             
       },
-      getHeaderTitleMonth(date){ 
-         const now  = new Date();
-         return now.getFullYear(date); 
+      getHeaderTitleMonth(year){ 
+         const now  = new Date();                 
+         return now.getFullYear(year); 
       }
     },
   }

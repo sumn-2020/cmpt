@@ -1,9 +1,8 @@
-/* body {min-height: 2000px;}
+#content {min-height: 750px;}
+footer {background: #505050;min-height: 110px;}
+.grab {max-width: 1200px; margin: 0 auto;} 
 
 
 
 
-
-
-
-.grab {max-width: 1200px; margin: 0 auto;} */
+.btn {border: 1px solid #ddd !important; margin-right: 10px;}

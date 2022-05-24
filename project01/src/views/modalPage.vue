@@ -3,33 +3,47 @@
     <!-- alertBtn -->
     <button
       type="button"
+      class="btn"
       @click="alertShow()"
     >
-      alertBtn
+      alertBtn(확인버튼)
     </button> 
     <!--  //alertBtn -->
 
     <!-- confirmBtn -->
     <button
       type="button"
+      class="btn"
       @click="confirmShow()"
     >
-      confirmBtn
+      confirmBtn(취소,확인버튼)
     </button> 
     <!--  //confirmBtn -->
 
-    <!--  모달type02 -->
+
+    <!-- calendar Modal Btn -->
+    <!-- <button
+      type="button"
+      class="btn"
+      @click="calendarShow()"
+    >
+      달력모달
+    </button>  -->
+    <!--  //calendar Modal Btn  -->
+
+    <!--  이중모달 -->
     <button
       class="btn"
+      type="button"
       @click="smsVerify()"
     >
-      모달type02
+      이중모달
     </button>
     <sms-verify-modal
       v-if="isShowSmsVerifyModal"
       @modal-closed="handleModalClosed"
-    />
-    <!--  // 모달type02 -->
+    /> 
+    <!--  // 이중모달 -->
   </div>
 </template>
 
@@ -43,19 +57,16 @@ export default {
     },
     data () {
       return {
-        //isModalViewed: false,
         isShowSmsVerifyModal: false,
       }
     },
     methods: {
-        //일반modal 
+        //이중모달 
         smsVerify() {
             this.isShowSmsVerifyModal = true
         },
-        handleModalClosed(value) {
-            if(value === SmsVerifyModal.name){
-                this.isShowSmsVerifyModal = false
-            }
+        handleModalClosed() {
+            this.isShowSmsVerifyModal = false
         },
         //alert창
         alertShow(){

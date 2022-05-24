@@ -1,8 +1,11 @@
 <template>
   <div id="app">
     <HeaderPage />
-    <div id="content" class="content">
-      <router-view></router-view>
+    <div
+      id="content"
+      class="content grab"
+    >
+      <router-view />
     </div>
     <FooterPage />
     <TopBtn />
