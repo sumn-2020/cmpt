@@ -19,15 +19,21 @@
         <b-navbar-nav>
           <router-link
             class=""
-            to="/home"
+            to="/tab"
           >
-            기타
+            탭
           </router-link>
           <router-link
             class=""
             to="/slider"
           >
             슬라이드
+          </router-link>
+          <router-link
+            class=""
+            to="/modal"
+          >
+            모달
           </router-link>
           <router-link
             class=""
@@ -40,12 +46,6 @@
             to="/calendarFull"
           >
             달력2
-          </router-link>
-          <router-link
-            class=""
-            to="/modal"
-          >
-            모달
           </router-link>
         </b-navbar-nav>
 
@@ -109,8 +109,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-    #header ::v-deep {
-        @import "~bootstrap/dist/css/bootstrap.min";
-        @import "~bootstrap-vue/dist/bootstrap-vue.min";
-    }
+#header ::v-deep {@import "~bootstrap/dist/css/bootstrap.min"; @import "~bootstrap-vue/dist/bootstrap-vue.min";}
+#header {margin-bottom: 80px;}
+#header a {padding: 15px;color: #fff !important;}
 </style>

@@ -43,16 +43,22 @@
       달력모달
     </button>  
     <!--  //calendar Modal Btn  -->
+
+    <br><br><br><br>
+    <!-- dropdown -->
+    <dropdownComp />
   </div>
 </template>
 
 <script>
 import SmsVerifyModal from '@/components/modal/SmsVerifyModal.vue'
+import dropdownComp from '@/components/dropdownComp.vue'
 
 export default {
     name: 'ModalPage',
     components: {
-      SmsVerifyModal
+      SmsVerifyModal,
+      dropdownComp
     },
     data () {
       return {
