@@ -1,20 +1,18 @@
 <template>
   <div>
-    <ListPage /> <br>
-    <TabTool /> <br>
+    <slickSlider /> <br>
   </div>
 </template>
 
 
 <script>
-import ListPage from '../components/ListPage.vue';
-import TabTool from '../components/TabTool.vue';
+
+import slickSlider from '../components/slider/sliderComp.vue';
 
 export default {
     name: 'HomePage',
     components: {
-        ListPage,
-        TabTool,
+        slickSlider,
     },
     data: function() {
         return {

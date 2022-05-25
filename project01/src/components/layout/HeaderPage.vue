@@ -25,6 +25,12 @@
           </router-link>
           <router-link
             class=""
+            to="/slider"
+          >
+            슬라이드
+          </router-link>
+          <router-link
+            class=""
             to="/calendar"
           >
             달력

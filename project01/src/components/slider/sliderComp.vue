@@ -27,7 +27,7 @@ export default {
     data: function() {
         return {
             data1: [
-                { image:  require('../assets/logo.png'), text: 'Config1' }, 
+                { image:  require('../../assets/logo.png'), text: 'Config1' }, 
                 { text: 'Config2'}, 
                 { text: 'Config3'}, 
                 { text: 'Config4'} 

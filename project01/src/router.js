@@ -5,6 +5,7 @@ import HomePage from "./views/HomePage";
 import CalendarPage from "./views/CalendarPage";
 import CalendarFull from "./views/CalendarFull";
 import modalPage from "./views/modalPage";
+import sliderPage from "./views/sliderPage";
 Vue.use(VueRouter);
 
 const router = new VueRouter({ // eslint-disable-line no-unused-vars
@@ -13,7 +14,8 @@ const router = new VueRouter({ // eslint-disable-line no-unused-vars
         { path: '/',  component: HomePage},
         {path: '/calendar', component: CalendarPage},
         {path: '/calendarFull', component: CalendarFull},
-        {path: '/modal', component: modalPage}
+        {path: '/modal', component: modalPage},
+        {path: '/slider', component: sliderPage}
     ]
 })
 
