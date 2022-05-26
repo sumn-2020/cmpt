@@ -1,6 +1,6 @@
 <template>
   <div>
-    메인
+    <input type="text">
   </div>
 </template>
 
@@ -13,6 +13,7 @@ export default {
     },
     data: function() {
         return {
+
         };
     }
 }
