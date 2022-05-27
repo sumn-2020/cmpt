@@ -72,12 +72,14 @@ export default {
         dropdownlists: [
           {content: "An item", content2: "An item1222"}
         ],
-
         value: '전체',
         list: [
           "orange", "apple"
         ],
-        visible: false
+        visible: false,
+        selectGroup : [
+
+        ]
        
     };
   } ,
