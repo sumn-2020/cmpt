@@ -45,7 +45,7 @@
             class=""
             to="/calendarFull"
           >
-            달력2
+            button disabled
           </router-link>
         </b-navbar-nav>
 
