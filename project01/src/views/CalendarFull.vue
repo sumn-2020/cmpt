@@ -59,11 +59,12 @@
       methods: {
         // input에 내용물 있을 경우 인증하기 버튼 disabled 삭제 / input에 내용문 없을 경우 버튼 disabled 추가  
         inputChanged(e) {
+          var collapse1 = document.getElementById('collapse1');
           if(e.target.value.length > 0) { 
             this.isDisabled = false
           }else {
             this.isDisabled = true;
-            this.show = false
+            collapse1.classList.remove('show');
           }
         }
       
