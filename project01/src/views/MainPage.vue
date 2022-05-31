@@ -1,5 +1,7 @@
 <template>
   <div class="grab">
+    <br><br><br><br><br>
+
     <div
       class=""
       :style="styleVue"
@@ -101,7 +103,11 @@ export default {
       report : 0,
 
       isDisabled: true,
-      isShow:false
+      isShow:false,
+
+
+
+
     };
   },
   methods: {
@@ -109,7 +115,8 @@ export default {
       const targetId = event.currentTarget.id;
       console.log(targetId);
       this.report += 1; //data안에 있는 거 갖다 쓰고싶을 경우  this. 필수
-    } 
+    },
+ 
   },
 };
 </script>
